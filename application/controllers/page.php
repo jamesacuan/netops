@@ -8,9 +8,16 @@ class Page extends CI_Controller{
     public function index(){
         echo "1";
     }
-    public function home(){
-        $this->load->view('header');
+    public function home($name){
+        $this->load->model('user_model');
+        $profile = $this->user_model->getProfile('testing');
+        print_r($profile);
+        
+        $data['profile'] = $profile;
+        $this->load->view('header', $data);
+        $this->load->view('navbar');
     }
+    
     public function one($p1, $p2){
         echo "testing $p1 $p2";
     }
@@ -18,5 +25,4 @@ class Page extends CI_Controller{
         echo "test";
     }
 }
-
 ?>
