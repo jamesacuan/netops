@@ -53,3 +53,12 @@ table {
 .nav{
    border: 1px solid red;
 }
+
+
+/*
+*	MENU
+*/
+
+.menu li{
+	float: left
+}
