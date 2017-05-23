@@ -62,7 +62,20 @@
         ?>
       </div>
     </div>
-    <div class="right">Login</div>
+    <div class="right">
+      <?php
+        if (isset($_SESSION['username'])){
+          echo "<div class='menu'>";
+          echo "<ul>";
+          echo "<li class='dropdown'><a href='#'>" . $_SESSION['username'] . '</a>';
+          echo "<div class='dropdown-content'>";
+          echo "<a href='logout.php'>Logout'</a></div></li>";
+        }
+        else{
+          echo "<a href='login.php'>Login</a>";
+        }
+      ?></div>
+    </div>
     <div class="clear"></div>
     </div>
 </div>

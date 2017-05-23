@@ -1,4 +1,5 @@
-<?php    
+<?php
+session_start();
     require_once("/resources/config.php");
     include TEMPLATES_PATH . "/header.php";
     include TEMPLATES_PATH . "/nav.php";
