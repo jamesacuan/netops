@@ -9,5 +9,4 @@
       <!-- content -->
    </div>
 </div>
-<?php
-   include TEMPLATES_PATH . "/footer.php";
+<?php include TEMPLATES_PATH . "/footer.php"; ?>

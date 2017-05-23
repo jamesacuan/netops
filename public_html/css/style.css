@@ -53,11 +53,34 @@ table {
 .nav{
    border: 1px solid red;
 }
-
+.container{
+   width: 1145px;
+   margin: auto auto;
+}
+/*
+*  HEADER
+*/
+.header{
+   height: 95px;
+   background-color: #005950;
+   position: relative;
+}
 
 /*
 *	MENU
 */
+.nav{
+   background-color: #fff;
+   font-family: arial !important;
+   font-size: 12px;
+   text-transform: uppercase;
+}
+.menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
 
 .menu li{
 	float: left
