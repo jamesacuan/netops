@@ -64,7 +64,7 @@
           echo "<a href='logout.php'>Logout'</a></div></li>";
         }
         else{
-          echo "<a href='login.php'>Login</a>";
+          echo "<a href='login.php?rel=" . 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'] . "'>Login</a>";
         }
       ?></div>
     </div>
