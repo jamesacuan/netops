@@ -14,19 +14,16 @@
 
         $num=$stmt->rowCount();
         if($num>0){
-           
-        //if ($_POST['username'] == '1234' && 
-            //$_POST['password'] == '1234') {
-            //$_SESSION['username'] = '1234';
-            
-            //echo '<script>alert("You have entered valid use name and password")</script>';
-            $_SESSION['username'] = $_POST['username'];
+           while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+               extract($row);
+               $_SESSION['username']  = $_POST['username'];
+               $_SESSION['userlevel'] = $userlevel_id;
+               $_SESSION['islogin']  = "true";
+            }
             header('Location:index.php');
         }else {
             $msg = 'Wrong username or password';
         }
-         echo $query;
-        echo $_POST['username'] . " " . $_POST['password'];
     }
 ?>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">

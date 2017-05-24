@@ -51,7 +51,9 @@ table {
 .right{float: right}
 .clear{clear:both}
 .nav{
-   border: 1px solid red;
+    /*border: 1px solid red;
+    */
+    border-bottom: 1px solid #e0e0e0;
 }
 .container{
    width: 1145px;
@@ -62,7 +64,7 @@ table {
 */
 .header{
    height: 64px;
-   background-color: #005950;
+   background-color: #efefef;
    position: relative;
 }
 
@@ -94,7 +96,8 @@ table {
 }
 
 .menu li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #426fd2;
+    color: #fff;
 }
 
 .menu li.dropdown {
@@ -121,4 +124,24 @@ table {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.nav .right{
+    position: relative !important;
+}
+
+.right .menu .dropdown-content{
+    right:0 !important;
+}
+
+.menu .dropdown a:after{
+    content: ' ▼';
+    font-size: 9px;
+}
+.menu .dropdown .dropdown-content a:after{
+    content: '' !important;
+}
+
+.dropdown-content a:last-child{
+    border-bottom: 3px solid #005950;
 }
