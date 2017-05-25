@@ -3,6 +3,7 @@
     include TEMPLATES_PATH . "/header.php";
     session_start();
 ?>
+
     <div class='loginBackground'></div>
 <?php
     $msg = '';
@@ -20,18 +21,25 @@
                $_SESSION['userlevel'] = $userlevel_id;
                $_SESSION['islogin']  = "true";
             }
+            /*if (isset($_GET['rel'])){
+                header('Location:' . $_GET['rel']);
+            }
+            else{
+                header('Location:index.php');
+            }*/
             header('Location:index.php');
         }else {
             $msg = 'Wrong username or password';
         }
     }
+
 ?>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
     <div class="container">
-        <label><b>Username</b></label>
+        <label>Username</label>
         <input type="text" placeholder="Enter Username" name="username">
 
-        <label><b>Password</b></label>
+        <label>Password</label>
         <input type="password" placeholder="Enter Password" name="password">
         <button type = "submit" name = "login">Login</button>
     </div>

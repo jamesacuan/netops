@@ -1,3 +1,7 @@
+<?php
+   include 'sidebar.php';
+?>
+<div class="content">
 <table>
     <th>
         <td>test</td>
@@ -8,3 +12,4 @@
         <td>wasdas awdasdasd</td>
     </tr>
 </table>
+</div>

@@ -46,7 +46,10 @@ table {
 /*
 *   GLOBAL
 */
-
+html, body{
+    margin: 0;
+    height: 100%;
+}
 .left{float: left}
 .right{float: right}
 .clear{clear:both}
@@ -66,6 +69,15 @@ table {
    height: 64px;
    background-color: #efefef;
    position: relative;
+}
+
+.title h1{
+    margin-top: 20px;
+    font-family: 'segoe ui';
+    font-size: 18px;
+}
+.title a{
+    text-decoration: none;
 }
 
 /*
@@ -145,3 +157,22 @@ table {
 .dropdown-content a:last-child{
     border-bottom: 3px solid #005950;
 }
+
+/*
+*   SIDEBAR
+*/
+.body{
+    border: 1px solid green;
+}
+.sidebar{
+    width:250px;
+    border: 1px solid rebeccapurple;
+}
+
+.content{
+    border: 1px solid red;
+}
+
+/*
+*   LOGIN
+*/

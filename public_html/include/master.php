@@ -7,6 +7,14 @@
     }
     include "/header.php";
     include "/nav.php";
-    include "/sidebar.php";
+?>
+
+<div class="body">
+<?php
     include ($page_content);
+?>
+</div>
+
+<?php
+    //include "/footer.php"
 ?>
