@@ -1,10 +1,42 @@
-<table>
-    <th>
-        <td>test</td>
-        <td>test</td>
-    </th>
-    <tr>
-        <td>1</td>
-        <td>wasdas awdasdasd</td>
-    </tr>
+<?php
+   include 'sidebar.php';
+?>
+
+<?php
+    $query = "SELECT * FROM `user` WHERE 1";
+    $stmt = $con->prepare($query);
+    $stmt->execute();
+
+    $num = $stmt->rowCount();
+?>
+
+<div class="content">
+<?php
+if($num>0){
+    echo "<table>";
+        echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>Name</th>";
+            echo "<th>Password</th>";
+            echo "<th>Action</th>";
+        echo "</tr>";
+         
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            extract($row);
+             
+            echo "<tr>";
+                echo "<td>{$user_id}</td>";
+                echo "<td>{$username}</td>";
+                echo "<td>{$password}</td>";
+                echo "<td>asd</td>";
+            echo "</tr>";
+        }
+    echo "</table>";    
+}
+ 
+else{
+    echo "<div'>No records found.</div>";
+}
+?>
 </table>
+</div>
