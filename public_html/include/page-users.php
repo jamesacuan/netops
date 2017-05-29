@@ -12,6 +12,18 @@
 
 <div class="content">
 <div class="toolbar">testing</div>
+
+<?php
+
+if ($num>0){
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        extract($row);
+        echo "<div class='row'>";
+        echo "<div>$username</div>";
+        echo "</div>";
+    }
+}
+?>
 <?php
 if($num>0){
     echo "<table>";

@@ -9,12 +9,12 @@
     include "/nav.php";
 ?>
 
-<div class="body">
+<div class="body grid">
 <?php
     include ($page_content);
 ?>
 </div>
 
 <?php
-    //include "/footer.php"
+    include "/footer.php"
 ?>
