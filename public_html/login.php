@@ -3,7 +3,7 @@
     include TEMPLATES_PATH . "/header.php";
     session_start();
 ?>
-
+<div class='body login'>
     <div class='loginBackground'></div>
 <?php
     $msg = '';
@@ -35,7 +35,7 @@
 
 ?>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
-    <div class="container">
+    <div class="cont">
         <label>Username</label>
         <input type="text" placeholder="Enter Username" name="username">
 
@@ -44,5 +44,7 @@
         <button type = "submit" name = "login">Login</button>
     </div>
     </form>
+</div>
+
 </body>
 </html>

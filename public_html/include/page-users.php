@@ -11,6 +11,7 @@
 ?>
 
 <div class="content">
+<div class="toolbar">testing</div>
 <?php
 if($num>0){
     echo "<table>";
@@ -38,5 +39,4 @@ else{
     echo "<div'>No records found.</div>";
 }
 ?>
-</table>
 </div>
