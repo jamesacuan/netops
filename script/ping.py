@@ -1,7 +1,16 @@
 from tkinter import *
+import MySQLdb
 import os
 
 root = Tk()
+
+  
+# Fetch a single row using fetchone() method.
+#data = cursor.fetchone()
+
+#print ("Database version : %s " % data)
+
+# disconnect from server
 
 def donothing():
    filewin = Toplevel(root)
@@ -98,8 +107,25 @@ Sb1 = Scrollbar(root)
 Sb1.pack(side=RIGHT, fill=Y)
 
 Lb1 = Listbox(root, yscrollcommand=Sb1.set)
-for x in range(1, 50):
-    Lb1.insert(x, "HOSTNAME " + str(x))
+
+db = MySQLdb.connect("localhost", "root", "", "db_netops")
+cursor = db.cursor()
+
+sql = "SELECT * FROM `workstation` order by hostname"
+try:
+   cursor.execute(sql)
+   results = cursor.fetchall()
+   for row in results:
+      hostid = row[0]
+      hostname = row[1]
+      hostip = row[2]
+      hostmac = row[3]
+      Lb1.insert(row[0], hostname)
+   
+except:
+   print ("Error: unable to fecth data")
+
+db.close()
 
 Lb1.bind("<Double-Button-1>", openSelection)
 Lb1.pack(expand=1,fill=BOTH)
